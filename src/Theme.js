@@ -24,14 +24,25 @@ const theme = createMuiTheme({
     h1: {},
     h2: {},
     h3: {},
-    h4: {},
+    h4: {
+      fontSize: 15,
+      fontWeight: 500,
+      fontStyle: "normal",
+      lineHeight: 1.5,
+      color: "#112d4e"
+    },
     h5: {},
     h6: {},
     body1: {},
     body2: {},
     subtitle1: {},
     subtitle2: {},
-    button: {},
+    button: {
+      fontSize: 14,
+      fontWeight: 500,
+      fontStyle: "normal",
+      lineHeight: 1.5
+    },
     caption: {},
     overline: {}
   }
