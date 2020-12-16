@@ -17,9 +17,7 @@ export const ThemeDistributor = (theme) => ({
     fontSize: "40px",
     letterSpacing: "-2px",
     wordSpacing: "0px",
-    color: "#000000",
     fontWeight: 700,
-    textDecoration: "none solid rgb(68, 68, 68)",
     fontStyle: "normal",
     fontVariant: "normal",
     textTransform: "capitalize"
