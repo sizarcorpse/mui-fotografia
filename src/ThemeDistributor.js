@@ -23,6 +23,15 @@ export const ThemeDistributor = (theme) => ({
     textTransform: "capitalize"
   },
 
+  // Logo
+  ScuiFotografiaLogo: {
+    fontSize: "20px",
+    letterSpacing: "0px",
+    fontWeight: 700,
+    fontStyle: "normal",
+    fontVariant: "normal"
+  },
+
   // Divider
 
   ScuiDividerTB3: {
