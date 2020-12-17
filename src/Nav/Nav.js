@@ -29,12 +29,15 @@ import {
   IconButton,
   InputBase,
   Avatar,
-  Badge
+  Badge,
+  Slide,
+  useScrollTrigger
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+
 const Nav = (props) => {
   const { classes } = props;
 
@@ -48,7 +51,8 @@ const Nav = (props) => {
   };
 
   return (
-    <>
+    <Box>
+      <CssBaseline />
       <AppBar position="static" className={classes.ScuiAppBar} color="primary">
         <Toolbar className={classes.ScuiToolbar}>
           <IconButton
@@ -103,7 +107,7 @@ const Nav = (props) => {
           </Box>
         </Toolbar>
       </AppBar>
-    </>
+    </Box>
   );
 };
 

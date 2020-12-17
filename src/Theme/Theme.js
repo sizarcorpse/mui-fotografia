@@ -21,7 +21,14 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: '"Roboto"',
-    h1: {},
+    h1: {
+      fontSize: "35px",
+      letterSpacing: "0px",
+      wordSpacing: "0px",
+      fontWeight: 700,
+      fontStyle: "normal",
+      fontVariant: "normal"
+    },
     h2: {},
     h3: {},
     h4: {
@@ -100,7 +107,7 @@ theme.overrides = {
       height: 40,
       marginTop: theme.spacing(1),
       marginBotton: theme.spacing(1),
-      backgroundColor: baal,
+      backgroundColor: "#f9f7f7",
       "&:hover": {
         backgroundColor: "#396dab"
       }
@@ -109,7 +116,7 @@ theme.overrides = {
       height: 40,
       marginTop: theme.spacing(2),
       marginBotton: theme.spacing(2),
-      backgroundColor: baal,
+      backgroundColor: "#f9f7f7",
       "&:hover": {
         backgroundColor: "#396dab"
       }
