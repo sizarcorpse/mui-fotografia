@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { withStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
-import { ThemeDistributor } from "./ThemeDistributor";
+import { ThemeDistributor } from "../Theme/ThemeDistributor";
 import {
   Typography,
   Card,
@@ -39,8 +39,6 @@ const Signup = (props) => {
 
   const validationSchema = {};
   const initialValues = {
-    firstName: "",
-    lastName: "",
     username: "",
     email: "",
     password: ""
@@ -53,7 +51,6 @@ const Signup = (props) => {
       className={clsx(classes.ScuiMainContainer, classes.ScuiBackground)}
     >
       <CssBaseline />
-
       <Grid item xs={false} xl={4} lg={3} md={2} sm={1}>
         <Box display="flex" justifyContent="center" mt={3}>
           <Typography color="primary" className={classes.ScuiFontSignup}>
@@ -75,14 +72,14 @@ const Signup = (props) => {
                       color="primary"
                       className={classes.ScuiFontSignup}
                     >
-                      Create Account
+                      Fotografia
                     </Typography>
                   }
                   subheader={
                     <Typography variant="h4" color="secondary">
-                      Already have an account?
+                      Don't have an Account?
                       <Link
-                        to={"/sin"}
+                        to={"/s"}
                         className={classes.ScuiLinkUnderLineRemove}
                       >
                         Sign in
@@ -100,7 +97,7 @@ const Signup = (props) => {
                   startIcon={<AlternateEmailIcon color="primary" />}
                 >
                   <Typography variant="button" color="primary">
-                    Sign up with google
+                    Sign in with google
                   </Typography>
                 </Button>
                 <Divider className={classes.ScuiDividerT24} />
@@ -125,109 +122,6 @@ const Signup = (props) => {
                     <CardContent>
                       <Form>
                         <Grid container spacing={2}>
-                          <Grid item xs={6}>
-                            <FormControl
-                              error={
-                                touched.firstName && Boolean(errors.firstName)
-                              }
-                              fullWidth
-                            >
-                              <TextField
-                                InputProps={{
-                                  startAdornment:
-                                    touched.firstName &&
-                                    Boolean(errors.firstName) ? (
-                                      <InputAdornment position="start">
-                                        <FaceIcon style={{ color: "red" }} />
-                                      </InputAdornment>
-                                    ) : (
-                                      <InputAdornment position="start">
-                                        <FaceIcon />
-                                      </InputAdornment>
-                                    )
-                                }}
-                                required
-                                autoComplete="firstName"
-                                name="firstName"
-                                variant="outlined"
-                                id="firstName"
-                                label="First Name"
-                                value={values.firstName}
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                              />
-                            </FormControl>
-                          </Grid>
-
-                          <Grid item xs={6}>
-                            <FormControl
-                              error={
-                                touched.lastName && Boolean(errors.lastName)
-                              }
-                              fullWidth
-                            >
-                              <TextField
-                                InputProps={{
-                                  startAdornment:
-                                    touched.lastName &&
-                                    Boolean(errors.lastName) ? (
-                                      <InputAdornment position="start">
-                                        <FaceIcon style={{ color: "red" }} />
-                                      </InputAdornment>
-                                    ) : (
-                                      <InputAdornment position="start">
-                                        <FaceIcon />
-                                      </InputAdornment>
-                                    )
-                                }}
-                                required
-                                autoComplete="lastName"
-                                name="lastName"
-                                variant="outlined"
-                                fullWidth
-                                id="lastName"
-                                label="Last Name"
-                                value={values.lastName}
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                              />
-                            </FormControl>
-                          </Grid>
-                          <Divider />
-                          <Grid item xs={12}>
-                            <FormControl
-                              error={
-                                touched.username && Boolean(errors.username)
-                              }
-                              fullWidth
-                            >
-                              <TextField
-                                InputProps={{
-                                  startAdornment:
-                                    touched.username &&
-                                    Boolean(errors.username) ? (
-                                      <InputAdornment position="start">
-                                        <PersonIcon style={{ color: "red" }} />
-                                      </InputAdornment>
-                                    ) : (
-                                      <InputAdornment position="start">
-                                        <PersonIcon />
-                                      </InputAdornment>
-                                    )
-                                }}
-                                required
-                                autoComplete="username"
-                                name="username"
-                                variant="outlined"
-                                fullWidth
-                                id="username"
-                                label="Username"
-                                value={values.username}
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                              />
-                            </FormControl>
-                          </Grid>
                           <Grid item xs={12}>
                             <FormControl
                               error={touched.email && Boolean(errors.email)}
@@ -313,18 +207,7 @@ const Signup = (props) => {
                               }
                               label={
                                 <Typography variant="h4" color="secondary">
-                                  I agree to the
-                                  <Link
-                                    className={classes.ScuiLinkUnderLineRemove}
-                                  >
-                                    Terms of Service
-                                  </Link>
-                                  and
-                                  <Link
-                                    className={classes.ScuiLinkUnderLineRemove}
-                                  >
-                                    Privacy Policy
-                                  </Link>
+                                  Keep me logged in
                                 </Typography>
                               }
                             />
@@ -335,13 +218,21 @@ const Signup = (props) => {
                           variant="contained"
                           color="secondary"
                           fullWidth
-                          // disabled={loading}
                         >
                           <Typography variant="button" color="primary">
-                            Create Now
+                            Log in
                           </Typography>
                         </Button>
                       </Form>
+                      <Divider className={classes.ScuiDividerTB3} />
+                      <Typography variant="h4" color="primary">
+                        <Link
+                          to={"/resetpassword"}
+                          className={classes.ScuiLinkUnderLineRemove}
+                        >
+                          Forgot your username or password?
+                        </Link>
+                      </Typography>
                     </CardContent>
                   );
                 }}

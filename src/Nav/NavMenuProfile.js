@@ -3,7 +3,7 @@ import { Formik, Form } from "formik";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { withStyles } from "@material-ui/core/styles";
-import { ThemeDistributor } from "./ThemeDistributor";
+import { ThemeDistributor } from "../Theme/ThemeDistributor";
 import {
   Typography,
   Card,

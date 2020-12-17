@@ -1,4 +1,4 @@
-import bg from "./background.svg";
+import bg from "../Assets/background.svg";
 
 export const ThemeDistributor = (theme) => ({
   // #action :

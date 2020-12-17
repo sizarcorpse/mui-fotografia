@@ -7,7 +7,7 @@ import NavMenuProfile from "./NavMenuProfile";
 
 import { withStyles } from "@material-ui/core/styles";
 import { MuiNav } from "./NavMui";
-import { ThemeDistributor } from "./ThemeDistributor";
+import { ThemeDistributor } from "../Theme/ThemeDistributor";
 import {
   Typography,
   Card,
