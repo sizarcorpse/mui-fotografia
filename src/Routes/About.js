@@ -29,13 +29,60 @@ const About = (props) => {
     <>
       {" "}
       <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
+      <Typography>About </Typography>
     </>
   );
 };
 
 export default withStyles(
   (theme) => ({
-    // ...MuiNav(theme),
+    // ...MuiProfile(theme),
     ...ThemeDistributor(theme)
   }),
   { withTheme: true }

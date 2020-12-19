@@ -35,11 +35,7 @@ const Profile = (props) => {
   return (
     <Grid container component="main">
       <CssBaseline />
-      <ProfileCoverInfo />
-      <UserNav />
-      <Grid item xs={12}>
-        {children}
-      </Grid>
+      Profile
     </Grid>
   );
 };

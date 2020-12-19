@@ -40,6 +40,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 
 const Nav = (props) => {
   const { classes } = props;
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 300 });
 
   // #action : menu profile
   const [profileMenuOpen, setProfileMenuOpen] = useState(null);
@@ -53,60 +54,65 @@ const Nav = (props) => {
   return (
     <Box>
       <CssBaseline />
-      <AppBar position="static" className={classes.ScuiAppBar} color="primary">
-        <Toolbar className={classes.ScuiToolbar}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box mr={2}>
-            <Typography variant="h6" className={classes.ScuiFotografiaLogo}>
-              Fotografia
-            </Typography>
-          </Box>
-          <Box className={classes.search} flexGrow="1">
-            <Box className={classes.searchIcon}>
-              <SearchIcon className={classes.searchIconSvg} />
+      <Slide in={!trigger}>
+        <AppBar position="fixed" className={classes.ScuiAppBar} color="primary">
+          <Toolbar className={classes.ScuiToolbar}>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box mr={2}>
+              <Typography variant="h6" className={classes.ScuiFotografiaLogo}>
+                Fotografia
+              </Typography>
             </Box>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput
-              }}
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Box>
-          <Box display="flex">
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={0} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={0} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-          </Box>
-          <Box mx={3}>
-            <Avatar
-              className={classes.ScuiLogedgUserAvater}
-              onClick={handleProfileMenuOpen}
-              onClose={handleProfileMenuClose}
-            ></Avatar>
+            <Box className={classes.search} flexGrow="1">
+              <Box className={classes.searchIcon}>
+                <SearchIcon className={classes.searchIconSvg} />
+              </Box>
+              <InputBase
+                placeholder="Search…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Box>
+            <Box display="flex">
+              <IconButton aria-label="show 4 new mails" color="inherit">
+                <Badge badgeContent={0} color="secondary">
+                  <MailIcon />
+                </Badge>
+              </IconButton>
+              <IconButton
+                aria-label="show 17 new notifications"
+                color="inherit"
+              >
+                <Badge badgeContent={0} color="secondary">
+                  <NotificationsIcon />
+                </Badge>
+              </IconButton>
+            </Box>
+            <Box mx={3}>
+              <Avatar
+                className={classes.ScuiLogedgUserAvater}
+                onClick={handleProfileMenuOpen}
+                onClose={handleProfileMenuClose}
+              ></Avatar>
 
-            <NavMenuProfile
-              profileMenuOpen={profileMenuOpen}
-              handleProfileMenuClose={handleProfileMenuClose}
-            />
-          </Box>
-        </Toolbar>
-      </AppBar>
+              <NavMenuProfile
+                profileMenuOpen={profileMenuOpen}
+                handleProfileMenuClose={handleProfileMenuClose}
+              />
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </Slide>
     </Box>
   );
 };

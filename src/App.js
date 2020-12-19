@@ -8,6 +8,7 @@ import Signin from "./Signin/Signin";
 import Profile from "./Profile/Profile";
 import About from "./Routes/About";
 import Home from "./Routes/Home";
+import UserNav from "./Profile/UserNav";
 
 export default function App() {
   return (
@@ -19,10 +20,11 @@ export default function App() {
             <Route path="/signup" exact component={Signup} />
             <Route path="/signin" exact component={Signin} />
             {/* <Route path="/u/:username" exact component={Profile} /> */}
-            <Profile>
+            <UserNav>
+              <Route path="/home" exact component={Profile} />
               <Route path="/album" exact component={Home} />
               <Route path="/about" exact component={About} />
-            </Profile>
+            </UserNav>
           </Switch>
         </Router>
       </ThemeProvider>

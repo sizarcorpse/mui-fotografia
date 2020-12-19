@@ -14,6 +14,9 @@ export const MuiProfile = (theme) => ({
     height: 100,
     width: 100,
     borderRadius: 0
+  },
+  List: {
+    color: "pink"
   }
 
   // user navigation

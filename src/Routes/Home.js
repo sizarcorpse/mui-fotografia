@@ -28,7 +28,7 @@ const Home = (props) => {
   return (
     <>
       {" "}
-      <Typography>Profile </Typography>{" "}
+      <Typography>HOme </Typography>{" "}
     </>
   );
 };
