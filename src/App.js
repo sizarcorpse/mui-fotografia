@@ -9,6 +9,7 @@ import Profile from "./Profile/Profile";
 import About from "./Routes/About";
 import Home from "./Routes/Home";
 import UserNav from "./Profile/UserNav";
+import SkeletonRoot from "./Skeleton";
 
 export default function App() {
   return (
@@ -16,15 +17,16 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <Router>
           <Route path="/" component={Nav} />
+          <Route path="/" component={UserNav} />
           <Switch>
             <Route path="/signup" exact component={Signup} />
             <Route path="/signin" exact component={Signin} />
-            {/* <Route path="/u/:username" exact component={Profile} /> */}
-            <UserNav>
-              <Route path="/home" exact component={Profile} />
-              <Route path="/album" exact component={Home} />
-              <Route path="/about" exact component={About} />
-            </UserNav>
+            <Route path="/u/:username" exact component={Profile} />
+
+            <Route path="/home" exact component={Profile} />
+            <Route path="/album" exact component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/sk" exact component={SkeletonRoot} />
           </Switch>
         </Router>
       </ThemeProvider>

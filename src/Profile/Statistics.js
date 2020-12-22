@@ -7,10 +7,6 @@ import { ThemeDistributor } from "../Theme/ThemeDistributor";
 import { MuiProfile } from "./MuiProfile";
 
 //component
-import Statistics from "./Statistics";
-
-import ProfileCoverInfo from "./ProfileCoverInfo";
-import UserNav from "./UserNav";
 
 import {
   Typography,
@@ -30,13 +26,39 @@ import {
   FormControlLabel
 } from "@material-ui/core";
 
-const Profile = (props) => {
+const Statistics = (props) => {
   const { classes, children } = props;
 
   return (
     <Grid container component="main">
       <CssBaseline />
-      <Statistics />
+      <Box display="flex">
+        <Box height={140} width={150} border={1} m={1}>
+          <Box
+            display="flex"
+            textAlign="center"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="row"
+            height={50}
+            mx={1}
+            p={1}
+          >
+            <Typography variant="h4">Profile total view</Typography>
+          </Box>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="row"
+            height={60}
+            mx={1}
+            p={1}
+          >
+            <Typography variant="h1">5260</Typography>
+          </Box>
+        </Box>
+      </Box>
     </Grid>
   );
 };
@@ -47,4 +69,4 @@ export default withStyles(
     ...ThemeDistributor(theme)
   }),
   { withTheme: true }
-)(Profile);
+)(Statistics);

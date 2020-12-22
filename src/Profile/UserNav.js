@@ -75,8 +75,6 @@ const UserNav = (props) => {
             </Box>
           </Toolbar>
         </AppBar>
-
-        {children}
       </Grid>
     </Grid>
   );
