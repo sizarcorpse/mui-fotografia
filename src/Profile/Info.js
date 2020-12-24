@@ -7,21 +7,10 @@ import { ThemeDistributor } from "../Theme/ThemeDistributor";
 import { MuiProfile } from "./MuiProfile";
 import {
   Typography,
-  Card,
-  CardHeader,
   Paper,
   Grid,
   Box,
-  CardContent,
-  Button,
-  Divider,
-  FormControl,
-  TextField,
-  InputAdornment,
   CssBaseline,
-  Checkbox,
-  FormControlLabel,
-  Avatar,
   IconButton
 } from "@material-ui/core";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
@@ -41,22 +30,23 @@ const Info = (props) => {
   return (
     <Grid item xs={4} style={{ marginTop: 60 }}>
       <CssBaseline />
-      <Box border={1} p={3} bgcolor="#212838">
+      <Box border={1} p={3}>
         <Box my={1}>
           <Typography className={classes.scui_profile_info_name_font}>
             Sizar Corpse
           </Typography>
         </Box>
         <Box display="flex" justifyContent="space-between" my={2}>
-          <Box flexGrow={1}>
+          <Box flexGrow={1} display="flex">
             <Typography variant="h4">I am </Typography>
           </Box>
-
-          {["Atist", "Design & Interface", "Photography"].map((m, i) => (
-            <Box key={i} mx={1}>
-              <Typography variant="h4">{m} </Typography>
-            </Box>
-          ))}
+          <Box flexGrow={1} display="flex">
+            {["Atist", "Design & Interface", "Photography"].map((m, i) => (
+              <Box key={i} mx={1}>
+                <Typography variant="h4">{m} </Typography>
+              </Box>
+            ))}
+          </Box>
         </Box>
         <Box display="flex" my={2}>
           <Box flexGrow={1}>
