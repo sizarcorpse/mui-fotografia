@@ -22,7 +22,19 @@ export const ThemeDistributor = (theme) => ({
     fontVariant: "normal",
     textTransform: "capitalize"
   },
-
+  scui_profile_info_name_font: {
+    letterSpacing: -0.5,
+    wordSpacing: 1,
+    fontWeight: 600,
+    textDecoration: "none",
+    fontStyle: "normal",
+    fontVariant: "normal",
+    textTransform: "none",
+    fontFamily: "Arial",
+    fontSize: 25,
+    marginBottom: 5,
+    color: "#132743"
+  },
   // Logo
   ScuiFotografiaLogo: {
     fontSize: "20px",
