@@ -11,6 +11,7 @@ import About from "./Routes/About";
 import Home from "./Routes/Home";
 import UserNav from "./Profile/UserNav";
 import SkeletonRoot from "./Skeleton";
+import MySlate from "./slatejs/SlateJs";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/" component={Nav} />
           {/* <Route path="/" component={UserNav} /> */}
           <Switch>
+            <Route path="/slate" exact component={MySlate} />
             <Route path="/signup" exact component={Signup} />
             <Route path="/signin" exact component={Signin} />
             <Route path="/u/:username" exact component={Profile} />
